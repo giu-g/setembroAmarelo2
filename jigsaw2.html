@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Van Gogh</title>
+    <link rel="icon" type="image/x-icon" href="./assets/logo.png">
+    <link rel="stylesheet" href="jigsaw.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <br>
+        <h1>Doze Girassóis numa Jarra</h1>
+
+        <button id="help-button" class="help-button">
+            <img src="./assets/help-logo.png" alt="Instruções">
+        </button>
+
+        <div id="help-box" class="help-box">
+            <p>Na parte inferior da tela, você verá 9 peças da pintura Doze Girassóis numa Jarra dispostas de forma
+                aleatória. Clique e arraste cada peça para a grade 3x3 localizada abaixo.</p>
+            <p>Quando todas as peças estiverem no lugar correto, uma mensagem de conclusão aparecerá na tela.</p>
+        </div>
+
+        <div class="button1">
+            <button id="reset-button">Resetar</button>
+            <button id="index-button">Página Inicial</button>
+        </div>
+
+        <div id="image-row" class="row"></div>
+        <div class="grid-wrapper">
+            <div id="puzzle-grid" class="grid"></div>
+        </div>
+
+        <div id="message">
+            <p>Parabéns! Você completou os quebra-cabeças de Van Gogh!</p>
+        </div>
+
+    </div>
+
+    <script src="jigsaw2.js"></script>
+</body>
+
+</html>

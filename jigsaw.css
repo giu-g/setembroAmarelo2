@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: #ffdd00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 2em;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.grid-wrapper {
+    display: inline-block;
+    border: 1px solid #ffdd00;
+    padding: 5px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    width: 300px;
+}
+
+.grid div {
+    padding-bottom: 100%;
+    border: 3px solid #ffdd00;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+#message {
+    font-size: 1.5em;
+    color: #eae7e7;
+    margin-top: 20px;
+    display: none;
+}
+
+.buttons {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.buttons button {
+    background-color: #ffdd00;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button1 button {
+    background-color: #ffdd00;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-bottom: 5%;
+}
+
+.buttons button:hover {
+    background-color: #e6c200;
+}
+
+#image-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#image-row img {
+    width: 100px;
+    height: auto;
+    border: 2px solid #ffdd00;
+    background-color: black;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .grid-wrapper {
+        width: 100%;
+    }
+
+    .grid {
+        width: 100%;
+    }
+
+    #image-row img {
+        width: calc(50% - 20px);
+    }
+}
+
+.help-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffcc00;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    max-width: 300px;
+    text-align: justify;
+    color: #000;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+.help-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.help-button img {
+    width: 50px;
+    height: auto;
+}
